@@ -12,6 +12,18 @@ Basically, it is plug-and-play. In addition, it has 4 buttons on the PCB, which 
 
 It has been working for several months, without any issue. I think it is durable enough.
 
+# Development Reources
+
+- [HAT Wiki](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_(B))
+- [User Manual](https://www.waveshare.com/w/upload/3/32/2.7inch-e-paper-hat-b-user-manual-en.pdf)
+- [Example Code](https://github.com/waveshare/e-Paper/blob/master/RaspberryPi_JetsonNano/python/examples/epd_2in7b_V2_test.py)
+
+# How to Run
+
+Dependencies: `pillow`, `RPi.GPIO`.
+
+To run: `python tps_epd_node_main.py`
+
 # Apps
 
 So far I implemented several apps, listed below. They are switched by buttons.
