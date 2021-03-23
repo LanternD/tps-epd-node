@@ -6,19 +6,27 @@ This repo contains the code for controling a small Raspberry Pi hat.
 
 # About the EPD Hat
 
-I bought it on [Amazon](https://www.amazon.com/gp/product/B075FQKSZ9/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
+I bought it on [Amazon](https://www.amazon.com/gp/product/B075FQKSZ9/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1).
 
-Basically, it is plug-and-play. In addition, it has 4 buttons on the PCB, which are very convenient for user input.
+Basically, it is plug-and-play. In addition, it has 4 buttons on the PCB, which are convenient for user input.
 
 It has been working for several months, without any issue. I think it is durable enough.
 
 # Apps
 
-So far I implemented several apps, listed below. They are switched by button
+So far I implemented several apps, listed below. They are switched by buttons.
 
 ## Stock Price Board
 
 The first application is a board showing the designated stock prices. I use Yahoo Finance API to get the latest stock price quote. Then I format everything onto the screen.
+
+Fetching stock price quotes:
+
+![img1](./assets/stock-app-1.jpg)
+
+Showing stock price:
+
+![img2](./assets/stock-app-2.jpg)
 
 ### Yahoo Finance Module
 
@@ -37,3 +45,7 @@ This app works together with the aforementioned stock board.
 ## Clock Module
 
 My second app is a simple clock. What makes it special is that the time is refreshed every 3 minutes instead of 1 minutes. I don't need it to be precise.
+
+Simple clock effect:
+
+![img3](./assets/clock-app.jpg)
