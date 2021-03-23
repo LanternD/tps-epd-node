@@ -38,11 +38,13 @@ Useful fields in `info` variable: `open, previousClose, regularMarketOpen, regul
 
 Sometimes I slouch after sitting for too long. The solution is to refresh the display temporarily showing "UP RIGHT!" for 5 seconds to remind me the posture. Then I can sit up right to protect my spine.
 
+![img4](./assets/posture-app.jpg)
+
 This app is simple. There is an update timer, which triggers the refresh every 5 minutes.
 
 This app works together with the aforementioned stock board.
 
-## Clock Module
+## Clock App
 
 My second app is a simple clock. What makes it special is that the time is refreshed every 3 minutes instead of 1 minutes. I don't need it to be precise.
 
