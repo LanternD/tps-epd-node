@@ -46,7 +46,7 @@ class YahooFinanceFetcher:
             self.tks[tk] = yh.Ticker(tk)  # re-create the stock handler.
             try:
                 info_json = self.tks[tk].info  # fetch from server
-            except (requests.exceptions.ConnectionError, urllib.error.HTTPError, KeyError, IndexError, requests.exceptions.ChunkedEncodingError):
+            except:  # too many error cases here. will by pass whatever error it is.
                 lg.error("Connection error, waiting for the next round")
                 info_json = {"previousClose": 0, "bid": 0, "ask": 0, "bidSize": 1, "askSize": 1}
                 self.tks_info[tk] = info_json
