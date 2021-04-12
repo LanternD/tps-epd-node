@@ -20,9 +20,24 @@ It has been working for several months, without any issue. I think it is durable
 
 # How to Run
 
-Dependencies: `pillow`, `RPi.GPIO`.
+1. Install the HAT driver:
 
-To run: `python tps_epd_node_main.py`
+``` shell
+git clone https://github.com/waveshare/e-Paper
+cd e-Paper
+sudo python setup.py install
+```
+
+This will install the dependencies. If you encounter any errors, they should be easily solved by StackOverflow.
+For example, `libtiff5` is required but not included in the Raspberry OS Lite.
+
+The `setup.py` script will install `numpy==1.16.2`, which is too old for another package `yfinance`. So we need to install it by ourselves.
+
+Another note here is that, do not install `numpy` via `sudo apt-get install python3-numpy`. 
+Use `pip` to get the latest version of `numpy` to prevent old version warnings and other possible errors.
+
+2. Dependencies installed by `pip`: `pillow`, `RPi.GPIO`, `yfinance`. 
+3. To run: `python tps_epd_node_main.py`
 
 # Apps
 
