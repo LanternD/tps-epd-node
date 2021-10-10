@@ -5,6 +5,7 @@ import logging
 import os
 import os.path as op
 import sys
+import pytz
 import time
 import traceback
 
@@ -209,7 +210,7 @@ class Display2In7Driver(object):
             op.join(self.font_dir, "LiberationSans-Regular.ttf"), 100
         )
 
-        timestamp = datetime.datetime.today()
+        timestamp = datetime.datetime.now(pytz.timezone('US/Pacific'))
         clk_drawer.text(
             (5, 0),
             "{0:02d}:{1:02d}".format(timestamp.hour, timestamp.minute),
