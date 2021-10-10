@@ -8,7 +8,8 @@ logging.basicConfig(
 
 
 def test_yh_finance_main():
-    stk_list = ["TSLA", "AAPL", "ARKW", "ARKK", "NIO", "AMZN"]
+    #  stk_list = ["TSLA", "AAPL", "ARKW", "ARKK", "NIO", "AMZN"]
+    stk_list = ["AAPL", "ARKW", "TSLA", "U", "TQQQ", "MSFT"]
     my_yhff = YahooFinanceFetcher(stk_list)
     my_yhff.refresh_stock_info_dict()
     # logging.info("Previous close: {0}".format(my_yhff.get_previous_close()))

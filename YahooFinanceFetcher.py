@@ -50,7 +50,7 @@ class YahooFinanceFetcher:
                 lg.error("Connection error, waiting for the next round")
                 info_json = {"previousClose": 0, "bid": 0, "ask": 0, "bidSize": 1, "askSize": 1}
                 self.tks_info[tk] = info_json
-            else:   
+            else:
                 self.tks_info[tk] = info_json
 
     def get_stock_markget_price(self):
@@ -60,8 +60,13 @@ class YahooFinanceFetcher:
             "Weighted average"
             return (bid * bid_size + ask * ask_size) / (bid_size + ask_size)
 
-        pd = {}
+        pd = {}  # Price dictionary
         for tk in self.stock_list:
+            if "bid" not in self.tks_info[tk]:
+                lg.error(f"Missing fields: {tk}")
+                #  print(self.tks_info)
+                pd[tk] = 0
+                continue
             quotes = calculate_price_quote(
                 self.tks_info[tk]["bid"],
                 self.tks_info[tk]["bidSize"],
@@ -75,7 +80,10 @@ class YahooFinanceFetcher:
         "Close price. Make sure the info dict is refreshed."
         pcd = {}
         for tk in self.stock_list:
-            pcd[tk] = self.tks_info[tk]["previousClose"]
+            if "previousClose" in self.tks_info[tk]:
+                pcd[tk] = self.tks_info[tk]["previousClose"]
+            else:
+                pcd[tk] = 0.00
         return pcd
 
     def format_display_2in7(self):

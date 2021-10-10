@@ -55,7 +55,7 @@ class EpdHatButtonHandler(object):
 
 class Display2In7Driver(object):
     def __init__(self, node_id):
-        self.prj_dir = os.getcwd()
+        self.prj_dir = os.path.dirname(os.path.realpath(__file__))
         self.font_dir = os.path.join(self.prj_dir, "fonts")
         self.lib_dir = os.path.join(self.prj_dir, "lib")  # not used
 

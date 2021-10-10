@@ -3,7 +3,7 @@ import logging
 import time
 import urllib
 
-import schedule
+#import schedule
 from Display2In7Driver import Display2In7Driver, EpdHatButtonHandler
 from YahooFinanceFetcher import YahooFinanceFetcher
 
@@ -17,7 +17,7 @@ STOCK_STREAMING = 1
 POSTURE_REMINDER = 2
 CLOCK = 3
 
-stk_list = ["ARKW", "SE", "TSLA", "GME", "UVXY", "MSFT"]
+stk_list = ["AAPL", "ARKW", "TSLA", "U", "TQQQ", "MSFT"]
 
 
 def epd_node_main():
